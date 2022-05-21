@@ -1,0 +1,103 @@
+[2022-05-21 10:37:13,642] {processor.py:163} INFO - Started process (PID=41) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:37:13,648] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:37:13,651] {logging_mixin.py:109} INFO - [2022-05-21 10:37:13,650] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:37:13,729] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:37:18,287] {logging_mixin.py:109} INFO - [2022-05-21 10:37:18,286] {providers_manager.py:156} WARNING - Exception when importing 'airflow.providers.google.leveldb.hooks.leveldb.LevelDBHook' from 'apache-airflow-providers-google' package: No module named 'plyvel'
+[2022-05-21 10:37:19,814] {logging_mixin.py:109} INFO - [2022-05-21 10:37:19,814] {providers_manager.py:156} WARNING - Exception when importing 'airflow.providers.google.leveldb.hooks.leveldb.LevelDBHook' from 'apache-airflow-providers-google' package: No module named 'plyvel'
+[2022-05-21 10:37:19,834] {logging_mixin.py:109} INFO - [2022-05-21 10:37:19,834] {manager.py:496} INFO - Created Permission View: can edit on DAG:select_and_log_articles
+[2022-05-21 10:37:19,844] {logging_mixin.py:109} INFO - [2022-05-21 10:37:19,844] {manager.py:496} INFO - Created Permission View: can read on DAG:select_and_log_articles
+[2022-05-21 10:37:19,845] {logging_mixin.py:109} INFO - [2022-05-21 10:37:19,845] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:37:19,870] {logging_mixin.py:109} INFO - [2022-05-21 10:37:19,870] {dag.py:2408} INFO - Creating ORM DAG for select_and_log_articles
+[2022-05-21 10:37:19,888] {logging_mixin.py:109} INFO - [2022-05-21 10:37:19,888] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:37:19,901] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 6.267 seconds
+[2022-05-21 10:37:49,997] {processor.py:163} INFO - Started process (PID=81) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:37:49,999] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:37:50,001] {logging_mixin.py:109} INFO - [2022-05-21 10:37:50,000] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:37:50,052] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:37:50,067] {logging_mixin.py:109} INFO - [2022-05-21 10:37:50,066] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:37:50,087] {logging_mixin.py:109} INFO - [2022-05-21 10:37:50,087] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:37:50,099] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.106 seconds
+[2022-05-21 10:40:02,683] {processor.py:163} INFO - Started process (PID=39) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:40:02,692] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:40:02,696] {logging_mixin.py:109} INFO - [2022-05-21 10:40:02,696] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:40:02,916] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:40:02,961] {logging_mixin.py:109} INFO - [2022-05-21 10:40:02,961] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:40:03,036] {logging_mixin.py:109} INFO - [2022-05-21 10:40:03,036] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:40:03,077] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.410 seconds
+[2022-05-21 10:40:33,217] {processor.py:163} INFO - Started process (PID=61) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:40:33,219] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:40:33,220] {logging_mixin.py:109} INFO - [2022-05-21 10:40:33,220] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:40:33,255] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:40:33,264] {logging_mixin.py:109} INFO - [2022-05-21 10:40:33,264] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:40:33,279] {logging_mixin.py:109} INFO - [2022-05-21 10:40:33,279] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:40:33,288] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.075 seconds
+[2022-05-21 10:41:03,405] {processor.py:163} INFO - Started process (PID=83) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:41:03,407] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:41:03,408] {logging_mixin.py:109} INFO - [2022-05-21 10:41:03,408] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:41:03,443] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:41:03,453] {logging_mixin.py:109} INFO - [2022-05-21 10:41:03,453] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:41:03,469] {logging_mixin.py:109} INFO - [2022-05-21 10:41:03,469] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:41:03,478] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.077 seconds
+[2022-05-21 10:41:33,592] {processor.py:163} INFO - Started process (PID=115) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:41:33,594] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:41:33,595] {logging_mixin.py:109} INFO - [2022-05-21 10:41:33,595] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:41:33,641] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:41:33,651] {logging_mixin.py:109} INFO - [2022-05-21 10:41:33,651] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:41:33,668] {logging_mixin.py:109} INFO - [2022-05-21 10:41:33,668] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:41:33,678] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.091 seconds
+[2022-05-21 10:42:03,799] {processor.py:163} INFO - Started process (PID=137) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:42:03,801] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:42:03,802] {logging_mixin.py:109} INFO - [2022-05-21 10:42:03,802] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:42:03,839] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:42:03,855] {logging_mixin.py:109} INFO - [2022-05-21 10:42:03,854] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:42:03,874] {logging_mixin.py:109} INFO - [2022-05-21 10:42:03,874] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:42:03,890] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.096 seconds
+[2022-05-21 10:42:34,016] {processor.py:163} INFO - Started process (PID=169) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:42:34,018] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:42:34,019] {logging_mixin.py:109} INFO - [2022-05-21 10:42:34,019] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:42:34,062] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:42:34,073] {logging_mixin.py:109} INFO - [2022-05-21 10:42:34,073] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:42:34,091] {logging_mixin.py:109} INFO - [2022-05-21 10:42:34,091] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:42:34,100] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.088 seconds
+[2022-05-21 10:43:04,218] {processor.py:163} INFO - Started process (PID=192) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:04,220] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:43:04,221] {logging_mixin.py:109} INFO - [2022-05-21 10:43:04,221] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:04,259] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:04,270] {logging_mixin.py:109} INFO - [2022-05-21 10:43:04,270] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:43:04,287] {logging_mixin.py:109} INFO - [2022-05-21 10:43:04,287] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:43:04,297] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.082 seconds
+[2022-05-21 10:43:10,465] {processor.py:163} INFO - Started process (PID=194) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:10,467] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:43:10,468] {logging_mixin.py:109} INFO - [2022-05-21 10:43:10,468] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:10,511] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:10,828] {logging_mixin.py:109} INFO - [2022-05-21 10:43:10,828] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:43:10,847] {logging_mixin.py:109} INFO - [2022-05-21 10:43:10,847] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:43:10,866] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.405 seconds
+[2022-05-21 10:43:21,510] {processor.py:163} INFO - Started process (PID=205) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:21,512] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:43:21,514] {logging_mixin.py:109} INFO - [2022-05-21 10:43:21,513] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:21,558] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:21,564] {logging_mixin.py:109} INFO - [2022-05-21 10:43:21,563] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:43:21,581] {logging_mixin.py:109} INFO - [2022-05-21 10:43:21,581] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:43:21,594] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.087 seconds
+[2022-05-21 10:43:51,684] {processor.py:163} INFO - Started process (PID=238) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:51,686] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:43:51,687] {logging_mixin.py:109} INFO - [2022-05-21 10:43:51,687] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:51,722] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:43:51,955] {logging_mixin.py:109} INFO - [2022-05-21 10:43:51,955] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:43:51,967] {logging_mixin.py:109} INFO - [2022-05-21 10:43:51,967] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:43:51,975] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.295 seconds
+[2022-05-21 10:44:22,829] {processor.py:163} INFO - Started process (PID=260) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:44:22,831] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:44:22,832] {logging_mixin.py:109} INFO - [2022-05-21 10:44:22,832] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:44:22,869] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:44:22,895] {logging_mixin.py:109} INFO - [2022-05-21 10:44:22,895] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:44:22,911] {logging_mixin.py:109} INFO - [2022-05-21 10:44:22,911] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:44:22,923] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.098 seconds
+[2022-05-21 10:44:53,044] {processor.py:163} INFO - Started process (PID=292) to work on /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:44:53,045] {processor.py:620} INFO - Processing file /opt/airflow/dags/j_chernigin_8_select_articles.py for tasks to queue
+[2022-05-21 10:44:53,047] {logging_mixin.py:109} INFO - [2022-05-21 10:44:53,047] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:44:53,082] {processor.py:632} INFO - DAG(s) dict_keys(['select_and_log_articles']) retrieved from /opt/airflow/dags/j_chernigin_8_select_articles.py
+[2022-05-21 10:44:53,092] {logging_mixin.py:109} INFO - [2022-05-21 10:44:53,092] {dag.py:2389} INFO - Sync 1 DAGs
+[2022-05-21 10:44:53,106] {logging_mixin.py:109} INFO - [2022-05-21 10:44:53,106] {dag.py:2921} INFO - Setting next_dagrun for select_and_log_articles to 2022-03-01T00:00:00+00:00
+[2022-05-21 10:44:53,114] {processor.py:171} INFO - Processing /opt/airflow/dags/j_chernigin_8_select_articles.py took 0.075 seconds
