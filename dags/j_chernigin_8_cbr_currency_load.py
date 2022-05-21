@@ -14,7 +14,7 @@ import logging
 
 DEFAULT_ARGS = {
     'start_date': days_ago(3),
-    'owner': 'j-chernigin-8',
+    'owner': 'airflow',
     'depends_on_past': True,
     'wait_for_downstream': True,
     'poke_interval': 600
@@ -24,7 +24,7 @@ DEFAULT_ARGS = {
         schedule_interval='@daily',
         max_active_runs=1,
         default_args=DEFAULT_ARGS,
-        tags=['j-chernigin-8', 'cbr-currency', 'greenplum']
+        tags=['cbr-currency', 'greenplum']
 )
 def cbr_currency_to_greenplum():
     dag.doc_md = __doc__
@@ -36,7 +36,7 @@ def cbr_currency_to_greenplum():
     xml_data_url = 'https://cbr.ru/scripts/xml_daily.asp?date_req={{ macros.ds_format(ds, "%Y-%m-%d", "%d/%m/%Y") }}'
     xml_file_path = '/tmp/j_chernigin_8_cbr_currency_tmp.xml'
     csv_file_path = '/tmp/j_chernigin_8_cbr_currency_tmp.csv'
-    gp_connection = 'conn_greenplum'
+    gp_connection = 'greenplum_karpovcourses'
 
     def check_data_existing_func(**kwargs):
         query = kwargs['query']

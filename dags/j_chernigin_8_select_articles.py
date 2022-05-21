@@ -12,7 +12,7 @@ import pendulum
 import logging 
 
 DEFAULT_ARGS = {
-    'owner': 'j-chernigin-8',
+    'owner': 'airflow',
     'start_date': pendulum.datetime(2022, 3, 1, tz='UTC'),
     'end_date': pendulum.datetime(2022, 3, 14, tz='UTC'),
     'schedule_interval': '@daily'
@@ -21,12 +21,12 @@ DEFAULT_ARGS = {
 @dag(
     max_active_runs=1,
     catchup=True,
-    tags=['articles', 'greenplum', 'j-chernigin-8'],
+    tags=['articles', 'greenplum'],
     default_args=DEFAULT_ARGS
 )
 def select_and_log_articles():
 
-    gp_connection = 'greenplum_karpov'
+    gp_connection = 'greenplum_karpovcourses'
     query = 'select heading from public.articles where id = $day_of_week$'
 
     @task
