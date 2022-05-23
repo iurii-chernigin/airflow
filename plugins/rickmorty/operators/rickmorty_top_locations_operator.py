@@ -14,12 +14,13 @@ class RickMortyTopLocationsOperator(BaseOperator):
     
     template_fields = ('top_count',)
     ui_color = "#e0ffff"
+    api_base_url = 'https://rickandmortyapi.com/api/location'
 
     def __init__(self, top_count: int = 3, **kwargs) -> None:
         super().__init__(**kwargs)
         self.top_count = top_count
 
-    def get_pages_count(self, api_url: str) -> int:
+    def run_request(self, api_url: str) -> dict:
         """
         Get count of pages in API
         :param api_url
@@ -27,19 +28,38 @@ class RickMortyTopLocationsOperator(BaseOperator):
         """
         response = requests.get(api_url)
         if response.status_code == 200:
-            logging.info(f'The request to {api_url} was successful')
-            page_count = response.json().get('info').get('pages')
-            logging.info(f'Number of pages is {page_count}')
-            return page_count
+            logging.info(f'The request to {api_url} is successful')
+            response_json = response.json()
+            return {
+                'locations': response_json.get('results'), 
+                'next': response_json.get('info').get('next') 
+            }
         else:
-            raise AirflowException(f'Failure attempt to make a get request to API URL {api_url}')
+            raise AirflowException(f'Failure attempt to make a get request to API URL {self.api_base_url}')
 
 
-    def get_locations_counters(self, results_json: list) -> list:
-        pass
+    def execute(self):
+        
+        location_counters = []
+        request_result = None
 
-    def get_results_by_page(self, page) -> list:
-        pass
+        while True: 
+            if request_result is None:
+                request_result = self.run_request(self.api_base_url)
+            else: 
+                request_result = self.run_request(request_result['next'])
+            for location in request_result['locations']:
+                location_counters.append({
+                    'id': location.get('id'),
+                    'residents': len(location.get('residents'))
+                })
+            if request_result['next'] is None:
+                break
 
-    def execute():
-        pass
+        location_counters = sorted(location_counters, key=lambda location: location['residents'], reverse=True)
+        logging.info(location_counters[0:self.top_count])
+
+            
+            
+
+
