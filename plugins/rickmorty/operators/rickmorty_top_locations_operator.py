@@ -41,7 +41,7 @@ class RickMortyTopLocationsOperator(BaseOperator):
             raise AirflowException(f'Failure attempt to make a get request to API URL {self.api_base_url}')
 
 
-    def execute(self):
+    def execute(self, context):
         
         location_counters = []
         request_result = None
