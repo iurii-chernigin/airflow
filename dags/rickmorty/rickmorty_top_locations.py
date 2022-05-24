@@ -41,7 +41,7 @@ def rickmorty_top_locations():
     top_locations_searching = RickMortyTopLocationsOperator(
         task_id='top_locations_searching',
         top_count=3,
-        result_path=csv_data_path
+        result_csv_path=csv_data_path
     )
 
     create_table = PostgresOperator(
