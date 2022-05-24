@@ -1,0 +1,1 @@
+truncate table public.j_chernigin_8_ram_location;
