@@ -12,7 +12,7 @@
     TODO: The DAG should be run every day
     TODO: The tasks should be restarted if it failed
 """
-from tracemalloc import take_snapshot
+import pendulum
 from airflow.decorators import dag, task
 from airflow.operators.bash import BashOperator
 from airflow.hooks.postgres_hook import PostgresHook
@@ -22,7 +22,8 @@ from rickmorty.operators.rickmorty_top_locations_operator  import RickMortyTopLo
 
 DEFAULT_ARGS = {
     'owner': 'airflow',
-    'schedule_interval': '@daily'
+    'schedule_interval': '@daily',
+    'start_date': pendulum.datetime(2022, 5, 23, tz='UTC')
 }
 
 @dag(
