@@ -34,7 +34,7 @@ DEFAULT_ARGS = {
 def rickmorty_top_locations():
     
     csv_data_path = '/tmp/ram_top_locations.csv'
-    pg_connection = 'greenplun_karpov_student'
+    pg_connection = 'greenplum_students'
     pg_table = 'public.j_chernigin_8_ram_location'
     pg_table_columns = '(id, name, type, dimension, resident_cnt)'
 
