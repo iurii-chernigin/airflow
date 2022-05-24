@@ -9,16 +9,19 @@ from airflow.exceptions import AirflowException
 
 import requests
 import logging
+import csv
 
 class RickMortyTopLocationsOperator(BaseOperator):
     
-    template_fields = ('top_count',)
+    template_fields = ('top_count', 'result_path', 'result_format',)
     ui_color = "#e0ffff"
     api_base_url = 'https://rickandmortyapi.com/api/location'
 
-    def __init__(self, top_count: int = 3, **kwargs) -> None:
+    def __init__(self, top_count: int = 3, result_csv_path: str = '/tmp/rickmorty_top_locations.csv', **kwargs) -> None:
         super().__init__(**kwargs)
         self.top_count = top_count
+        self.result_csv_path = result_csv_path
+
 
     def run_request(self, api_url: str) -> dict:
         """
@@ -42,6 +45,7 @@ class RickMortyTopLocationsOperator(BaseOperator):
         
         location_counters = []
         request_result = None
+        result_csv_path = self.result_csv_path
 
         while True: 
             if request_result is None:
@@ -57,7 +61,20 @@ class RickMortyTopLocationsOperator(BaseOperator):
                 break
 
         location_counters = sorted(location_counters, key=lambda location: location['residents'], reverse=True)
-        logging.info(location_counters[0:self.top_count])
+        location_counters = location_counters[0:self.top_count]
+        logging.info(f'TOP-{self.top_count} locations by residents: {location_counters}')
+
+        with open(result_csv_path, 'w') as file:
+            writer = csv.writer(file)
+            writer.writerow(['id', 'residents'])
+            for location in location_counters:
+                writer.writerow([location['id'], location['residents']])
+
+
+
+
+
+
 
             
             

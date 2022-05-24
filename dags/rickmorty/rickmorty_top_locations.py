@@ -15,6 +15,7 @@
 from airflow.decorators import dag, task
 from airflow.operators.python import get_current_context
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+from rickmorty.operators.rickmorty_top_locations_operator  import RickMortyTopLocationsOperator
 
 DEFAULT_ARGS = {
     'owner': 'airflow',
