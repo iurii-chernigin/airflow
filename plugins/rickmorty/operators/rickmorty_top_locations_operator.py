@@ -72,7 +72,7 @@ class RickMortyTopLocationsOperator(BaseOperator):
                 name = response_json.get('name')
                 type = response_json.get('type')
                 dimension = response_json.get('dimension')
-                location_counters.append({
+                location_counters_enriched.append({
                     'id': location['id'],
                     'name': name,
                     'type': type,
