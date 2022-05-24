@@ -60,7 +60,7 @@ def rickmorty_top_locations():
     @task
     def copy_to_db_from_csv():
         pg_hook = PostgresHook(pg_connection)
-        query = 'COPY {pg_table} {pg_table_columns} from STDING {options}'.format(
+        query = 'COPY {pg_table} {pg_table_columns} from STDIN {options}'.format(
             pg_table=pg_table,
             pg_table_columns=pg_table_columns,
             options="DELIMITER ',' CSV HEADER"
