@@ -13,7 +13,7 @@ import csv
 
 class RickMortyTopLocationsOperator(BaseOperator):
     
-    template_fields = ('top_count', 'result_path', 'result_format',)
+    template_fields = ('top_count', 'result_path',)
     ui_color = "#e0ffff"
     api_base_url = 'https://rickandmortyapi.com/api/location'
 
