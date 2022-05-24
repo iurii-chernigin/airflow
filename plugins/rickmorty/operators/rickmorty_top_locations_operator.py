@@ -54,21 +54,42 @@ class RickMortyTopLocationsOperator(BaseOperator):
                 request_result = self.run_request(request_result['next'])
             for location in request_result['locations']:
                 location_counters.append({
-                    'id': location.get('id'),
-                    'residents': len(location.get('residents'))
+                    'id': int(location.get('id')),
+                    'resident_cnt': len(location.get('residents'))
                 })
             if request_result['next'] is None:
                 break
 
-        location_counters = sorted(location_counters, key=lambda location: location['residents'], reverse=True)
+        location_counters = sorted(location_counters, key=lambda location: location['resident_cnt'], reverse=True)
         location_counters = location_counters[0:self.top_count]
         logging.info(f'TOP-{self.top_count} locations by residents: {location_counters}')
 
+        location_counters_enriched = []
+        for location in location_counters:
+            response = requests.get('https://rickandmortyapi.com/api/location/{}'.format(location['id']))
+            if response.status_code == 200:
+                response_json = response.json()
+                name = response_json.get('name')
+                type = response_json.get('type')
+                dimension = response_json.get('dimension')
+                location_counters.append({
+                    'id': location['id'],
+                    'name': name,
+                    'type': type,
+                    'dimension': dimension,
+                    'resident_cnt': location['resident_cnt']
+                })
+
         with open(result_csv_path, 'w') as file:
             writer = csv.writer(file)
-            writer.writerow(['id', 'residents'])
-            for location in location_counters:
-                writer.writerow([location['id'], location['residents']])
+            writer.writerow(['id', 'name', 'type', 'dimension', 'resident_cnt'])
+            for location in location_counters_enriched:
+                writer.writerow([
+                    location['id'], 
+                    location['name'],
+                    location['type'],
+                    location['dimension'],
+                    location['resident_cnt']])
 
 
 
